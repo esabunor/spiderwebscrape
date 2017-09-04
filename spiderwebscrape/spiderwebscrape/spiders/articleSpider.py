@@ -9,4 +9,7 @@ class ArticleSpider(Spider):
 
     def parse(self, response): 
         item = Article()
-        title = 
+        title = response.xpath('//h1/text()')[0].extract()
+        print("Tiel is : " + title)
+        item['title'] = title
+        return item
