@@ -8,4 +8,5 @@ class ArticleSpider(Spider):
     start_urls = []
 
     def parse(self, response): 
-        pass
+        item = Article()
+        title = 
