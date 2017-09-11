@@ -13,7 +13,7 @@ class BasicSpider(scrapy.Spider):
     allowed_domains = ['web']
     
     def start_requests(self):
-        driver = webdriver.Chrome(executable_path="/Users/tegaesabunor/Downloads/chromedriver")
+        driver = webdriver.Chrome(executable_path="/Users/tegaesabunor/Documents/workspacepy/chromedriver")
         driver.get("https://cmc-11.channels.blackberry.com/bbmchannels-web-portal/main")
         element = driver.find_element_by_xpath('//*[@id="formId:email"]')
         element.send_keys("tesabunor@gmail.com")
